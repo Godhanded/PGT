@@ -1,7 +1,9 @@
-Token
+Token(check)
 
-payfee
+getfee price from pancake(test)
 
-owner withdraw
+payfee(test)
+
+owner withdraw(check)
 
 show balance

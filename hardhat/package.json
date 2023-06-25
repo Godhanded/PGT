@@ -5,6 +5,7 @@
     "author": "Godand",
     "dependencies": {
         "@types/node": "^18.0.6",
+        "global": "^4.4.0",
         "hardhat-shorthand": "^1.0.0",
         "node-fetch": "^3.2.6"
     },

@@ -107,7 +107,7 @@ module.exports = {
     },
     contractSizer: {
         runOnCompile: true,
-        only: ["MySignalApp"],
+        only: ["PGT"],
     },
     namedAccounts: {
         deployer: {
