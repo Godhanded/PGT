@@ -3,7 +3,7 @@ const { ethers } = require("hardhat");
 const networkConfig = {
     31337: {
         name: "localhost",
-        fee: ethers.utils.parseUnits("0.1", 6),
+        fee: ethers.utils.parseEther("0.1"),
     },
     5: {
         name: "goerli",
@@ -15,7 +15,7 @@ const networkConfig = {
     },
     56: {
         name: "BSC",
-        fee: ethers.utils.parseUnits("0.1", 6),
+        fee: ethers.utils.parseEther("0.1"),
     },
 };
 

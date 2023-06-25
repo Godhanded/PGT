@@ -35,7 +35,7 @@ contract PriceGapToken is ERC20, Ownable, ERC20Permit {
     // deduct fees from price Gap Arbitrage platform
     function payFee() external {
         (uint112 res0, uint112 res1, ) = s_pgtPair.getReserves();
-        uint256 amount = (i_fee * res1) / res0;
+        uint256 amount = (i_fee * res0) / res1;
         s_balance += amount;
         address owner = _msgSender();
         _transfer(owner, address(this), amount);
@@ -60,8 +60,13 @@ contract PriceGapToken is ERC20, Ownable, ERC20Permit {
         s_pairSet = true;
     }
 
-    function getFee() external view returns (uint256) {
+    function getFeeUSD() external view returns (uint256) {
         return i_fee;
+    }
+
+    function getCurrentFeePgt() external view returns(uint256){
+        (uint112 res0, uint112 res1, ) = s_pgtPair.getReserves();
+        return (i_fee * res0) / res1; 
     }
 
     function getFeeBalance() external view returns (uint256) {
