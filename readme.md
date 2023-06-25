@@ -1,9 +1,8 @@
 Token(check)
 
-getfee price from pancake(test)
+getfee price from pancake(check)
 
-payfee(test)
+payfee(check)
 
 owner withdraw(check)
 
-show balance
