@@ -2,8 +2,8 @@ const { network } = require("hardhat");
 const { verify } = require("../utils/verify");
 const { developmentChains, networkConfig } = require("../helper-hardhat-config");
 
-module.exports = async ({ getNamedAccouns, deployments }) => {
-    const { deployer } = await getNamedAccouns();
+module.exports = async ({ getNamedAccounts, deployments }) => {
+    const { deployer } = await getNamedAccounts();
     const { deploy, log } = deployments;
     const chainId = network.config.chainId;
 
@@ -17,6 +17,7 @@ module.exports = async ({ getNamedAccouns, deployments }) => {
         from: deployer,
         args: args,
         log: true,
+
         waitConfirmations: network.config.blockConfirmations || 2,
     });
 

@@ -25,11 +25,7 @@ contract PriceGapToken is ERC20, Ownable, ERC20Permit {
         uint256 _fee
     ) ERC20("Price Gap Token", "PGT") ERC20Permit("Price Gap Token") {
         i_fee = _fee;
-        _mint(msg.sender, 1000000 * 10 ** decimals());
-    }
-
-    function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
+        _mint(msg.sender, 16720 * 10 ** decimals());
     }
 
     // deduct fees from price Gap Arbitrage platform

@@ -30,7 +30,7 @@ const MNEMONIC = process.env.MNEMONIC || "your mnemonic";
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API || "Your etherscan API key";
 const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || "Your polygonscan API key";
 const BSCSCAN_API = process.env.BSCSCAN_API || "Your BSCScan Api Key";
-const REPORT_GAS = process.env.REPORT_GAS || false;
+const REPORT_GAS = process.env.REPORT_GAS || true;
 
 module.exports = {
     defaultNetwork: "hardhat",
@@ -99,10 +99,10 @@ module.exports = {
         },
     },
     gasReporter: {
-        enabled: REPORT_GAS,
+        enabled: true,
         currency: "USD",
-        outputFile: "gas-report.txt",
-        noColors: true,
+        // outputFile: "gas-report.txt",
+        noColors: false,
         coinmarketcap: process.env.COINMARKETCAP_API_KEY,
     },
     contractSizer: {
