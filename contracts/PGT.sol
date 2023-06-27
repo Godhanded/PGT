@@ -56,7 +56,7 @@ contract PriceGapToken is ERC20, Ownable, ERC20Permit {
         s_pairSet = true;
     }
 
-    function getFeeUSD() external view returns (uint256) {
+    function getFeeUsd() external view returns (uint256) {
         return i_fee;
     }
 

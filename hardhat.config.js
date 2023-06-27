@@ -37,9 +37,9 @@ module.exports = {
     networks: {
         hardhat: {
             // // If you want to do some forking, uncomment this
-            // forking: {
-            //   url: MAINNET_RPC_URL
-            // }
+            forking: {
+                url: MAINNET_RPC_URL,
+            },
             chainId: 31337,
             blockConfirmations: 1,
         },
@@ -101,8 +101,9 @@ module.exports = {
     gasReporter: {
         enabled: true,
         currency: "USD",
-        // outputFile: "gas-report.txt",
-        noColors: false,
+        token: "BNB",
+        outputFile: "gas-report.txt",
+        noColors: true,
         coinmarketcap: process.env.COINMARKETCAP_API_KEY,
     },
     contractSizer: {
@@ -135,12 +136,12 @@ module.exports = {
         // ],
         version: "0.8.18",
 
-        settings:{
-            optimizer:{
-                enabled:true,
-                runs:13730
-            }
-        }
+        settings: {
+            optimizer: {
+                enabled: true,
+                runs: 2000,
+            },
+        },
     },
     mocha: {
         timeout: 500000, // 500 seconds max for running tests

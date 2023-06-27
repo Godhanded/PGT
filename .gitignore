@@ -9,7 +9,7 @@ node_modules
 coverage
 coverage.json
 
-
+deployments
 
 # don't push the environment vars!
 .env
@@ -99,6 +99,5 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 
-gas-report.txt
 .issue.md
 typechain-types
