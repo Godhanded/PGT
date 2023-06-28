@@ -110,18 +110,18 @@ const { loadFixture } = require("ethereum-waffle");
 
                   await expect(PGT.payFee())
                       .to.emit(PGT, "FeePaid")
-                      .withArgs(deployer.address, ethers.utils.parseEther("0.1"));
+                      .withArgs(deployer.address, ethers.utils.parseEther("0.5573"));
 
                   const finalBalalance = await PGT.balanceOf(deployer.address);
 
                   const sbalance = await PGT.getFeeBalance();
                   assert.equal(
                       sbalance.toString(),
-                      ethers.utils.parseEther("0.1").toString()
+                      ethers.utils.parseEther("0.5573").toString()
                   );
                   assert.equal(
                       initialBal.toString(),
-                      finalBalalance.add(ethers.utils.parseEther("0.1")).toString()
+                      finalBalalance.add(ethers.utils.parseEther("0.5573")).toString()
                   );
               });
           });
