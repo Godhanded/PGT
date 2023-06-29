@@ -2,7 +2,7 @@
 pragma solidity 0.8.18;
 
 error PriceGapToken__IncorrectBalance();
-error PriceGapToken__AlreadySet();
+error PriceGapToken__PairAlreadySet();
 
 import {IPancakePair} from "./interfaces/IPancakeSwap.sol";
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -50,7 +50,7 @@ contract PriceGapToken is ERC20, Ownable, ERC20Permit {
 
     function setPgtPair(address _pairAddr) external onlyOwner {
         if (s_pairSet) {
-            revert PriceGapToken__AlreadySet();
+            revert PriceGapToken__PairAlreadySet();
         }
         s_pgtPair = IPancakePair(_pairAddr);
         s_pairSet = true;
