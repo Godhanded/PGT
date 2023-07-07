@@ -21,7 +21,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
     log("-------------------------------");
     if (!developmentChains.includes(network.name) && process.env.BSCSCAN_API) {
-        await verify(PGT.address, args);
+        await verify(lpLock.address, args);
     }
 
     log("-------------------------------------------------------");
