@@ -21,6 +21,7 @@ const networkConfig = {
     56: {
         name: "BSC",
         fee: ethers.utils.parseEther("0.1"),
+        lpAddr: "0xaCFe55620451089c49C1F2635CE10F141cBeb7eB",
     },
 };
 

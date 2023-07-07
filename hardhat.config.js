@@ -108,7 +108,7 @@ module.exports = {
     },
     contractSizer: {
         runOnCompile: true,
-        only: ["PGT"],
+        only: ["PGT", "LpLock", "Token"],
     },
     namedAccounts: {
         deployer: {
